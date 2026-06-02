@@ -3,3 +3,34 @@ $fuente-titulos:"Playfair Display", serif;
 $fuente-parrafo: "DM Sans", sans-serif;
 
 //Colores
+$burdeo-oscuro:#3D1520;
+$color-texto-general:#0F0508;
+$color-boton:#A63D5A ;
+$hover-boton:#C9A84C;
+$color-tags:#E1C8BA;
+$fondo:#FFFBF9;
+$burdeo-cinta:#5C1F2E;
+$burdeo-banner:#7B2D3E;
+$color-fuente-banner: #ffffff;
+
+body{
+    h1{
+        font-family: $fuente-titulos;
+        font-size: 48px;
+        font-weight: 800;
+    }
+    h2{
+        font-family: $fuente-titulos;
+    }
+    h3{
+        font-family: $fuente-titulos;
+    }
+    h4{
+        font-family: $fuente-titulos;
+    }
+    p{
+        font-family: $fuente-parrafo;
+        font-size: 20px;
+    }
+
+}
