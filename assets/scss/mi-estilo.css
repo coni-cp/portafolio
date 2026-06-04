@@ -361,16 +361,20 @@ body {
 }
 
 header {
-  margin: 0 auto;
-  width: 90%;
+  margin: 0;
+  width: 100%;
 }
 header .navbar {
   height: 70px;
+  border-bottom: 0.5px solid rgba(92, 31, 46, 0.15);
+  padding: 0 5%;
+  box-shadow: 0 2px 3px rgba(61, 21, 32, 0.15);
 }
-header .navbar-nav {
+header .navbar .navbar-nav {
   gap: 40px;
+  background-color: #FFFBF9;
 }
-header .navbar-nav .nav-link {
+header .navbar .navbar-nav .nav-link {
   font-family: "DM Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;

@@ -25,22 +25,28 @@ body{
 
 
 //header
-header{
-    margin: 0 auto;
-    width: 90%;
-    .navbar {
+header {
+  margin: 0;
+  width: 100%;
+
+  .navbar {
     height: 70px;
-    }
-    .navbar-nav{
-        gap: 40px;
-        .nav-link{
+    border-bottom: 0.5px solid rgba(92, 31, 46, 0.15);
+    padding: 0 5%; 
+    box-shadow: 0 2px 3px rgba(61, 21, 32, 0.15);
+
+    .navbar-nav {
+      gap: 40px;
+      background-color: $fondo;
+
+      .nav-link {
         font-family: $fuente-parrafo;
         font-size: 18px;
         font-weight: 400;
         color: $burdeo-oscuro;
+      }
     }
-    }
-  
+  }
 }
 .logo{
     font-family: $fuente-titulos;
