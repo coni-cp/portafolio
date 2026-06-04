@@ -5,25 +5,125 @@ body{
     margin: 0;
     background-color: $fondo;
 }
+//separadores
+.diferente-contenido{
+    margin-top: $distinto-contenido;
+}
+.mismo-contenido{
+   margin-top: $mismo-contenido;
+}
+.titulo-contenido{
+    margin-top:$titulo-contenido;
+}
+.separador-navbar{
+   margin-top:$sepador-navbar;
+}
+.separador-footer{
+    margin-top:$separador-footer;
+}
+
+
 
 //header
 header{
     margin: 0 auto;
     width: 90%;
+    .navbar {
+    height: 70px;
+    }
+    .navbar-nav{
+        gap: 40px;
+        .nav-link{
+        font-family: $fuente-parrafo;
+        font-size: 18px;
+        font-weight: 400;
+        color: $burdeo-oscuro;
+    }
+    }
+  
 }
 .logo{
     font-family: $fuente-titulos;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 800;
+    color: $burdeo-oscuro;
 }
 
 
+.btn-particulas {
+  @include btn-particulas ($color-boton, $hover-boton);
+}
+.btn-contacto {
+  @include btn-particulas ($hover-boton, $color-boton);
+}
+
+ @keyframes btnParticulasAnim {
+  0%   { transform: scale(0); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
 
 
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 5%;
 
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .footer-logo {
+    font-family: $fuente-titulos;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $burdeo-oscuro;
+  }
 
+  .footer-contacto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: $burdeo-oscuro;
 
+    .separador {
+      width: 1px;
+      height: 20px;
+      background-color: $burdeo-oscuro;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      &:hover { opacity: 0.6; }
+    }
+  }
+}
+
+// Botón volver arriba
+.btn-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: $burdeo-cinta; 
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+  }
+}
 
 
 

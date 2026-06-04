@@ -5,32 +5,46 @@ $fuente-parrafo: "DM Sans", sans-serif;
 //Colores
 $burdeo-oscuro:#3D1520;
 $color-texto-general:#0F0508;
-$color-boton:#A63D5A ;
+$color-boton:#7B2D3E ;
 $hover-boton:#C9A84C;
 $color-tags:#E1C8BA;
 $fondo:#FFFBF9;
 $burdeo-cinta:#5C1F2E;
 $burdeo-banner:#7B2D3E;
 $color-fuente-banner: #ffffff;
+$boton-borde: #EDD9A3;
+
+//Separadores
+$distinto-contenido: 9.375rem;
+$mismo-contenido: 3.75rem;
+$titulo-contenido: 2.625rem;
+$sepador-navbar: 6.25rem;
+$separador-footer: 12.5rem;
 
 body{
     h1{
         font-family: $fuente-titulos;
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 800;
     }
     h2{
         font-family: $fuente-titulos;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $color-texto-general;
     }
     h3{
         font-family: $fuente-titulos;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-texto-general;
     }
     h4{
         font-family: $fuente-titulos;
     }
     p{
         font-family: $fuente-parrafo;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
 }

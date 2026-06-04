@@ -69,3 +69,239 @@ ul, li { list-style: none; }
 @media (max-width: 767px) {
   .flow_banner .list > li { font-size: 14px; padding: 5px; }
 }
+
+.botones-banner{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  .btn-solido{
+    @include botonrellenobanner;
+  }
+  .btn-outline{
+    @include boton-borde-banner;
+  }
+}
+
+.info-banner{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 45px;
+}
+.margen{
+    margin: 0 auto;
+  width: 90%;
+}
+.proyecto-destacado{
+  margin: 0 auto;
+  width: 90%;
+    .laptop-wrapper {
+    position: relative;
+    width: 100%;
+
+    .laptop-img {
+      width: 100%;
+      display: block;
+    }
+
+    .proyecto-img {
+      position: absolute;
+      // Estos valores los ajustas según donde quede la pantalla en tu imagen
+      top: 10%;
+      left: 14%;
+      width: 75%;
+      height: 80%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
+ .tecno-tags-home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+
+  .tag {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: $color-tags; // ajusta al color de tu paleta
+    color: #000000;       // ajusta al color de tu paleta
+    font-size: 16px;
+    font-family: $fuente-parrafo;
+    font-weight: 400;
+    
+  }
+}
+ //seccion quien soy
+.timeline-cards {
+  display: flex;
+  gap: 24px;
+
+}
+.timeline-cards {
+  display: flex;
+  gap: 10px;
+}
+
+.timeline-card {
+  position: relative;
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 300px;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.79);
+    transition: background 0.4s ease;
+    z-index: 1;
+  }
+
+  .card-contenido {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+      font-size: 28px;
+      color: #fff !important;
+      margin: 0 0 8px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+      margin: 0;
+    }
+  }
+
+  .card-año {
+    position: absolute;
+    z-index: 2;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    transition: all 0.4s ease;
+  }
+
+  // --- HOVER ---
+  &:hover {
+
+    img {
+      transform: scale(1.05);
+    }
+
+    &::before {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85) 30%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.1) 100%
+      );
+    }
+
+      .card-año {
+    bottom: auto;  // ya no está abajo
+    top: 16px;     // va arriba
+    right: 20px;
+    left: auto;
+    font-size: 2.5rem;
+  }
+
+    .card-contenido {
+      justify-content: flex-end;
+      align-items: flex-start;
+      text-align: left;
+      padding-bottom: 20px;
+
+      h3 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+.timeline-flecha {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  color: $burdeo-cinta;
+  flex-shrink: 0; // que no se comprima
+}
+
+//contacto
+.contendor-contacto{
+  background-color: $burdeo-cinta;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  color: #fff !important;
+  padding: 42px 0;
+  border-radius: 10px;
+  h2{
+      color: #fff !important;
+  }
+  p{
+    font-size: 24px;
+  }
+  .info-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0; // importante para que no desplace verticalmente
+  }
+
+  svg {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .separador {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+}

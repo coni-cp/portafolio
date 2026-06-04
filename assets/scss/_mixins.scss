@@ -1,9 +1,65 @@
-@mixin rellenobanner{
-    background-color: $color-botones;
-    color: $header-blanco;
-    font-family: $fuente-todo;
+@mixin botonrellenobanner{
+    background-color: $hover-boton;
+    color: $burdeo-oscuro;
+    font-family: $fuente-parrafo;
     font-size: 18px;
-    padding: 8px 36px;
-    box-shadow: 0px 4px 15px #E6007E;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 8px 20px;
     border: none;
+}
+
+@mixin boton-borde-banner{
+    background-color: transparent;
+    color: $boton-borde;
+    font-family: $fuente-parrafo;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 8px 20px;
+    border:2px solid $boton-borde;
+}
+
+
+@mixin btn-particulas($color, $color-hover) {
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: $color;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s, transform 0.25s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-hover;
+    color: $burdeo-oscuro;
+    font-weight: 600;
+    transform: scale(1.05);
+  }
+
+ .btn-particulas__particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: btnParticulasAnim 1s linear infinite;
+// separado para que sea más fácil sobreescribir
+}
+
+&:hover .btn-particulas__particle,
+&:focus .btn-particulas__particle {
+  animation-play-state: running;
+}
 }
