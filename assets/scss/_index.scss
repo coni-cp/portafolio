@@ -26,7 +26,11 @@
     .bajada-de-titulo {
       font-size: 36px;
     }
+    h1, p{
+    color:$color-fuente-banner !important;
+    }
   }
+ 
 }
 
 ul, li { list-style: none; }

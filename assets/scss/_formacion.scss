@@ -1,0 +1,176 @@
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+
+  // Línea vertical
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: $burdeo-banner;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    left: -1.85rem;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $burdeo-banner;
+    border: 2px solid $burdeo-banner;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__left {
+    h3 {
+      margin: 0 0 0.2rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__fecha {
+    font-size: 1.25rem;
+    color: $color-texto-general;
+    white-space: nowrap;
+    padding-top: 2px;
+    font-weight: 500;
+  }
+}
+
+.trayectoria {
+  position: relative;
+
+  .col-9 {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Móvil: oculta
+  .col-3 {
+    display: none;
+  }
+
+  // Tablet: flujo normal
+  @media (min-width: 768px) {
+    .col-3 {
+      display: block;
+      position: relative; // vuelve al flujo
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 350px;
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px;
+        display: block;
+      }
+    }
+  }
+
+  // Desktop: sale del contenedor
+  @media (min-width: 992px) {
+    .col-9 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .col-3 {
+      position: absolute;
+      top: -110px;
+      right: -11%;
+      width: 409px;
+      height: auto;
+      padding: 0;
+
+      img {
+        width: 350px;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 6px;
+        display: block;
+      }
+    }
+  }
+}
+
+// ── Cursos y Certificaciones ───────────────────
+.cursos {
+  .row {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.curso-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: $color-tags;
+  border: 1px solid $color-texto-general;
+  border-radius: 6px;
+  padding: 1rem;
+  height: 100%;
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h4 {
+      margin: 0 0 0.2rem;
+    }
+  }
+
+  &__inst {
+    font-size: 0.8rem;
+    color: $color-texto-general;
+  }
+
+  &__anio {
+    font-size: 0.75rem;
+    color: $color-texto-general;
+    margin-top: auto;
+    text-align: right;
+    align-self: flex-end;
+  }
+}

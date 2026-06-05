@@ -26,6 +26,7 @@ body{
         font-family: $fuente-titulos;
         font-size: 3rem;
         font-weight: 800;
+        color: $color-texto-general;
     }
     h2{
         font-family: $fuente-titulos;
@@ -41,10 +42,14 @@ body{
     }
     h4{
         font-family: $fuente-titulos;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $color-texto-general;
     }
     p{
         font-family: $fuente-parrafo;
         font-size: 1.25rem;
+        color: $color-texto-general;
     }
 
 }
