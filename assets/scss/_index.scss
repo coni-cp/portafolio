@@ -196,12 +196,13 @@ ul, li { list-style: none; }
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
-    p {
+    .texto-tens, .texto-dev{
       font-size: 16px;
       opacity: 0;
       transform: translateY(10px);
       transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
       margin: 0;
+      color: $color-fuente-banner;
     }
   }
 
@@ -278,8 +279,9 @@ ul, li { list-style: none; }
   h2{
       color: #fff !important;
   }
-  p{
+  .texto-contacto{
     font-size: 24px;
+    color: #fff !important;
   }
   .info-contacto {
   display: flex;

@@ -245,12 +245,13 @@ ul, li {
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.timeline-card .card-contenido p {
+.timeline-card .card-contenido .texto-tens, .timeline-card .card-contenido .texto-dev {
   font-size: 16px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
   margin: 0;
+  color: #ffffff;
 }
 .timeline-card .card-año {
   position: absolute;
@@ -310,8 +311,9 @@ ul, li {
 .contendor-contacto h2 {
   color: #fff !important;
 }
-.contendor-contacto p {
+.contendor-contacto .texto-contacto {
   font-size: 24px;
+  color: #fff !important;
 }
 .contendor-contacto .info-contacto {
   display: flex;
@@ -406,7 +408,7 @@ ul, li {
   width: 100%;
 }
 
-.tag {
+.tag-hb {
   position: absolute;
   padding: clamp(4px, 0.8vw, 5px) clamp(8px, 1.5vw, 10px);
   border-radius: 10px;
@@ -630,6 +632,86 @@ ul, li {
   margin-top: auto;
   text-align: right;
   align-self: flex-end;
+}
+
+.proyectos-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.proyectos-filtros .filtro {
+  background: transparent;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #0F0508;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.proyectos-filtros .filtro:hover {
+  background: rgba(123, 45, 62, 0.1);
+  color: #7B2D3E;
+}
+.proyectos-filtros .filtro.activo {
+  background: #7B2D3E;
+  color: #ffffff;
+}
+
+.proyectos .proyecto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.proyectos .proyecto-imagen {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.proyectos .proyecto-imagen img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.proyectos .proyecto-imagen img:hover {
+  transform: scale(1.02);
+}
+.proyectos .titulo-enlace {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.25rem;
+}
+.proyectos .nombre-proyecto {
+  padding: 0;
+}
+.proyectos .nombre-proyecto span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: #0F0508;
+  font-weight: 300;
+}
+.proyectos .visitar-link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: #0F0508;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.proyectos .visitar-link .flecha {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.proyectos .visitar-link:hover {
+  color: #7B2D3E;
+}
+.proyectos .visitar-link:hover .flecha {
+  transform: translate(2px, -2px);
 }
 
 body {
