@@ -66,24 +66,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-//boton brillante 
-function createBtnParticles() {
-  document.querySelectorAll('.btn-particulas').forEach(btn => {
-    const container = btn.querySelector('.btn-particulas__container');
-    if (!container) return;
-
-    for (let i = 0; i < 30; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('btn-particulas__particle');
-      particle.style.cssText = `
-        top: ${Math.random() * 100}%;
-        left: ${Math.random() * 100}%;
-        animation-duration: ${Math.random() * 0.5 + 0.5}s;
-        animation-delay: ${Math.random() * 1.5}s;
-      `;
-      container.appendChild(particle);
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', createBtnParticles);

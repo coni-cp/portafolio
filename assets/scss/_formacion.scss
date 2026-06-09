@@ -137,19 +137,28 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: $color-tags;
-  border: 1px solid $color-texto-general;
+  border: 1px solid $burdeo-cinta;
   border-radius: 6px;
   padding: 1rem;
   height: 100%;
 
+ 
   &__img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     min-width: 50px;
-    background-color: #d9d9d9;
     border-radius: 4px;
+    overflow: hidden; // recorta la imagen al tamaño del contenedor
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // usa contain para logos
+      object-position: center;
+      display: block;
+    }
   }
+
 
   &__info {
     display: flex;

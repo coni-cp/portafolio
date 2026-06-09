@@ -57,17 +57,14 @@ header {
 }
 
 
-.btn-particulas {
-  @include btn-particulas ($color-boton, $hover-boton);
+.btn-principal {
+  @include btn-principal;
 }
 .btn-contacto {
-  @include btn-particulas ($hover-boton, $color-boton);
+  @include btn-principal;
 }
 
- @keyframes btnParticulasAnim {
-  0%   { transform: scale(0); opacity: 1; }
-  100% { transform: scale(1.5); opacity: 0; }
-}
+
 
 
 .footer {

@@ -127,13 +127,7 @@ ul, li { list-style: none; }
   margin-top: 16px;
 
   .tag {
-    padding: 5px 10px;
-    border-radius: 10px;
-    background: $color-tags; // ajusta al color de tu paleta
-    color: #000000;       // ajusta al color de tu paleta
-    font-size: 16px;
-    font-family: $fuente-parrafo;
-    font-weight: 400;
+   @include tags;
     
   }
 }
