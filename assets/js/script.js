@@ -3,7 +3,7 @@ particlesJS("particles-js", {
   "particles": {
     // cantidad de particulas
     "number": { "value": 800, "density": { "enable": false, "value_area": 5524 } },
-    "color": { "value": "#ffe9a2" },
+    "color": { "value": "#EBECE9" },
     "shape": { "type": "star" },
     "opacity": { "value": 1, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0, "sync": false } },
     //tamaño particulas

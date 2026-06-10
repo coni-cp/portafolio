@@ -46,6 +46,9 @@ header {
         font-weight: 400;
         color: $burdeo-oscuro;
       }
+      .active{
+          font-weight: 900;
+        }
     }
   }
 }
@@ -60,8 +63,8 @@ header {
 .btn-principal {
   @include btn-principal;
 }
-.btn-contacto {
-  @include btn-principal;
+.btn-gris {
+  @include btn-gris;
 }
 
 

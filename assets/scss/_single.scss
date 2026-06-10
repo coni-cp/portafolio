@@ -24,8 +24,6 @@
             align-items: center;
             gap: 0.4rem;
             font-family: $fuente-parrafo;
-            font-size: 0.9rem;
-            padding: 0.45rem 1.1rem;
             border-radius: 6px;
             text-decoration: none;
             transition: background 0.2s, color 0.2s;
@@ -33,23 +31,20 @@
         }
 
         .btn-single-codigo {
-            background: $burdeo-banner;
-            color: $color-fuente-banner;
-
-            &:hover {
-                background: $burdeo-oscuro;
-            }
+           @include btn-principal;
+            font-size: 0.9rem;
+            padding: 0.45rem 1.1rem ;
+            
         }
 
         .btn-single-visitar {
+            @include btn-principal;
             background: transparent;
             color: $burdeo-oscuro;
             border: 1.5px solid $burdeo-banner;
-
-            &:hover {
-                border-color: $burdeo-banner;
-                color: $burdeo-banner;
-            }
+            font-size: 0.9rem;
+            padding: 0.45rem 1.1rem ;
+            font-weight: 500;
         }
     }
 }
