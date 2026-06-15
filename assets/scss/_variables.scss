@@ -1,5 +1,5 @@
 //Fuentes
-$fuente-titulos:"Playfair Display", serif;
+$fuente-titulos: "Noto Serif", serif;
 $fuente-parrafo: "DM Sans", sans-serif;
 
 //Colores
@@ -48,7 +48,7 @@ body{
     }
     p{
         font-family: $fuente-parrafo;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         color: $color-texto-general;
     }
 

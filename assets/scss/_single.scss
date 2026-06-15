@@ -3,6 +3,13 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap; // ya lo tenías
+    gap: 1rem;
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: flex-start; // título arriba, botones abajo
+    }
 
     .nombre-proyecto-single {
         span {
@@ -46,12 +53,56 @@
             padding: 0.45rem 1.1rem ;
             font-weight: 500;
         }
+         @media (max-width: 576px) {
+        width: 100%; // ocupan el ancho completo
+
+        a {
+            flex: 1; // cada botón ocupa mitad del ancho
+            justify-content: center;
+        }
+    }
     }
 }
 
-.img-banner-single {
+$margen-horizontal: 8%; // tu 85% traducido a margen = ~8% por lado
+
+.banner-single {
+    max-width: 1400px; // tope máximo — en monitores más grandes no crece más
+    margin: 0 auto;    // centrado
+}
+
+.fila-banner {
     width: 100%;
-    border-radius: 8px;
+}
+
+.col-img-single {
+    padding-left: 0;
+    margin-left: calc(-1 * #{$margen-horizontal});
+    width: calc(66.66% + #{$margen-horizontal});
+
+    @media (max-width: 768px) {
+        margin-left: 0; // en móvil la imagen no rompe el margen
+        width: 100%;
+    }
+
+    .img-banner-single {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        @media (max-width: 768px) {
+            height: 280px; // menos altura en móvil
+        }
+    }
+}
+
+.col-ficha-single {
+    padding-left: 2rem;
+    padding-right: $margen-horizontal;
+      @media (max-width: 768px) {
+        padding: 1.5rem; // usa el margen del sitio en móvil
+    }
 }
 
 .ficha-tecnica {
@@ -146,4 +197,24 @@
             transform: scale(1.03);
         }
     }
+}
+
+//single 2
+.descripcion-rol-single {
+  .row {
+    align-items: stretch; // todas las columnas igualan la altura de la más alta
+  }
+
+  [class*="col"] {
+    display: flex;        // necesario para que height: 100% funcione dentro
+  }
+
+  .bloque-descripcion,
+  .bloque-rol {
+    border: 1px solid $burdeo-cinta;
+    border-radius: 6px;
+    padding: 8px 10px;
+    height: 100%;         // ocupa todo el alto de su columna
+    width: 100%;          // ocupa todo el ancho (necesario al usar display flex en col)
+  }
 }

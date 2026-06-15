@@ -1,92 +1,145 @@
+// ── Filtros desktop ───────────────────────────
 .proyectos-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
 
-    .filtro {
-        background: transparent;
-        border: none;
-        padding: 0.45rem 1.1rem;
-        border-radius: 6px;
-        font-family: $fuente-parrafo;
-        font-size: 0.95rem;
-        color: $color-texto-general;
-        cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease;
+  // En móvil se oculta, aparece el select
+  @media (max-width: 767px) {
+    display: none;
+  }
 
-        &:hover {
-            background: rgba($burdeo-banner, 0.1);
-            color: $burdeo-banner;
-        }
+  .filtro {
+    background: transparent;
+    border: none;
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    font-family: $fuente-parrafo;
+    font-size: 0.95rem;
+    color: $color-texto-general;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
 
-        &.activo {
-            background: $burdeo-banner;
-            color: $color-fuente-banner;
-        }
+    &:hover {
+      background: rgba($burdeo-banner, 0.1);
+      color: $burdeo-banner;
     }
+
+    &.activo {
+      background: $burdeo-banner;
+      color: $color-fuente-banner;
+    }
+  }
 }
 
+// ── Filtros móvil: dropdown ───────────────────
+.proyectos-filtros-movil {
+  display: none;
+  margin-bottom: 2rem;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  .filtro-select {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid $burdeo-cinta;
+    border-radius: 6px;
+    font-family: $fuente-parrafo;
+    font-size: 0.95rem;
+    color: $color-texto-general;
+    background-color: transparent;
+    appearance: none;                      // quita la flecha nativa
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237B2D3E' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: $burdeo-banner;
+    }
+  }
+}
+
+// ── Grilla de proyectos ───────────────────────
 .proyectos {
-    .proyecto-card {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
+  .proyecto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;                          // ocupa todo el alto de la columna
+  }
+
+  .proyecto-imagen {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+
+      @media (max-width: 767px) {
+        height: 200px;                     // imagen más chica en móvil
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
     }
+  }
 
-    .proyecto-imagen {
-        width: 100%;
-        border-radius: 6px;
-        overflow: hidden;
+  .titulo-enlace {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0.25rem;
+    gap: 0.5rem;
+  }
 
-        img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
+  .nombre-proyecto {
+    padding: 0;
 
-            &:hover {
-                transform: scale(1.02);
-            }
-        }
-    }
-
-    .titulo-enlace {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 0.25rem;
-    }
-
-    .nombre-proyecto {
-        padding: 0;
-        span {
-            font-family: $fuente-parrafo;
-            font-size: 1rem;
-            color: $color-texto-general;
-            font-weight: 300;
-        }
-    }
-
-    .visitar-link {
-        font-family: $fuente-parrafo;
+    h3 {
+      @media (max-width: 767px) {
         font-size: 1rem;
-        color: $color-texto-general;
-        white-space: nowrap;
-        transition: color 0.2s;
-
-        .flecha {
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-
-        &:hover {
-            color: $burdeo-banner;
-
-            .flecha {
-                transform: translate(2px, -2px);
-            }
-        }
+      }
     }
+
+    span {
+      font-family: $fuente-parrafo;
+      font-size: 1rem;
+      color: $color-texto-general;
+      font-weight: 300;
+    }
+  }
+
+  .visitar-link {
+    font-family: $fuente-parrafo;
+    font-size: 1rem;
+    color: $color-texto-general;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    .flecha {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    &:hover {
+      color: $burdeo-banner;
+
+      .flecha {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
 }

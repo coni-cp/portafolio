@@ -37,13 +37,13 @@
             </div>
             </nav>
     </header>
-    <body>
-       <div class="margen separador-navbar">
+    <main>
+       <div class="container-xl separador-navbar">
             <h1>Proyectos</h1>
         </div>
 
         <!-- Filtros -->
-        <div class="proyectos-filtros margen">
+        <div class="proyectos-filtros titulo-contenido container">
             <button class="filtro activo" data-filtro="todo">Todo</button>
             <button class="filtro" data-filtro="ecommerce">E-Commerce</button>
             <button class="filtro" data-filtro="api-rest">API REST</button>
@@ -51,8 +51,19 @@
             <button class="filtro" data-filtro="elearning">E-Learning</button>
         </div>
 
+                <!-- Filtros móvil: dropdown -->
+        <div class="proyectos-filtros-movil container">
+            <select class="filtro-select" id="filtroSelect">
+                <option value="todo">Todo</option>
+                <option value="ecommerce">E-Commerce</option>
+                <option value="api-rest">API REST</option>
+                <option value="plataforma-web">Plataforma Web</option>
+                <option value="elearning">E-Learning</option>
+            </select>
+        </div>
+
         <!-- Grilla de proyectos -->
-        <div class="proyectos margen titulo-contenido">
+        <div class="proyectos container-xl titulo-contenido">
             <div class="row g-4">
                 <div class="col-md-6 proyecto-item" data-categoria="api-rest">
                     <div class="proyecto-card">
@@ -69,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 proyecto-item" data-categoria="ecommerce">
+                <div class="col-md-6 proyecto-item gy-3" data-categoria="ecommerce">
                     <div class="proyecto-card">
                         <div class="proyecto-imagen">
                             <img src="assets/img/radical-pop.png" alt="Radical Pop">
@@ -100,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 proyecto-item" data-categoria="ecommerce">
+                <div class="col-md-6 proyecto-item gy-3" data-categoria="ecommerce">
                     <div class="proyecto-card">
                         <div class="proyecto-imagen">
                             <img src="assets/img/recicla2.png" alt="Radical Pop">
@@ -116,7 +127,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </main>
     <footer class="footer separador-footer">
         <div class="footer-inner">
             <span class="footer-logo">CP</span>
