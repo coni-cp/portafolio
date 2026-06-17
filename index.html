@@ -5,38 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio-CP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="assets/scss/mi-estilo.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">CP</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="perfil.html">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="formacion.html">Formación</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"  href="proyectos.html" >Proyectos</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-            </nav>
-    </header>
+   <header>
+  <nav class="cp-navbar">
+    <div class="cp-nav-inner">
+      <a href="index.html" class="logo">CP</a>
+
+      <ul class="cp-nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="formacion.html">Formación</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+
+      <button class="cp-toggler" id="cpToggler" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cp-mobile-menu" id="cpMobileMenu">
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="formacion.html">Formación</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+    </ul>
+  </div>
+</header>
     <main>
         <!-- banner --> 
         <div class="banner">
@@ -47,7 +49,7 @@
                 <p class="parrafo-banner">Desarrollo web con lógica técnica y perspectiva humana.</p>
                 <div class="botones-banner">
                         <a href="perfil.html" class="btn-gris"><span>Ver Proyectos</span></a>
-                        <a href="" class="btn-outline"><span>Descargar CV</span></a>
+                        <a href="assets/constanza_parraguez-.pdf" class="btn-outline"><span>Descargar CV</span></a>
                 </div>
                 <div class="info-banner">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -73,16 +75,15 @@
         </div>
         <!-- Proyecto destacado --> 
         <div class="proyecto-destacado diferente-contenido container-xl">
-            <h2>Proyecto Destacado</h2>
+            <h2 data-aos="fade-up">Proyecto Destacado</h2>
             <div class="row">
-                 <div class="col-md-8">
+                 <div class="col-md-8" data-aos="fade-right">
                     <div class="laptop-wrapper">
                         <img src="assets/img/computador-home.svg" alt="Mockup laptop" class="laptop-img">
                         <img src="assets/img/capacitaciones-home.png" alt="Capacitaciones MASS" class="proyecto-img">
                     </div>
                 </div>
-                <div class="col-md-4 order-md-2">
-                    
+                <div class="col-md-4 order-md-2" data-aos="fade-left" data-aos-delay="150">
                     <div class="descripcion-proyecto-home ">
                         <h3 class="mismo-contenido">Capacitaciones MASS</h3>
                         <p class="titulo-contenido">Diseño instruccional, UX/UI y desarrollo integral. Módulos interactivos, evaluaciones, seguimiento de progreso, panel de empresa y entrega de certificado</p>
@@ -104,12 +105,11 @@
         <div class="quien-soy diferente-contenido container-xl">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h2 class="text-center">¿Quién Soy?</h2>
-                    <p>Comencé en el área de la salud, pero descubrí que necesitaba un espacio donde pudiera seguir creciendo constantemente. En 2024 encontré el desarrollo web y con él, una carrera sin techo</p>
+                    <h2 class="text-center" data-aos="fade-up">¿Quién Soy?</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Comencé en el área de la salud, pero descubrí que necesitaba un espacio donde pudiera seguir creciendo constantemente. En 2024 encontré el desarrollo web y con él, una carrera sin techo</p>
                 </div>
                 <div class="timeline-cards mismo-contenido">
-
-                    <div class="timeline-card">
+                    <div class="timeline-card" data-aos="fade-right">
                         <img src="assets/img/foto-tens.jpeg" alt="Técnico en Radiodiagnóstico">
                         <div class="card-contenido">
                             <h3>Técnico en Radiodiagnóstico y Radioterapia</h3>
@@ -117,8 +117,8 @@
                         </div>
                         <span class="card-año">2018</span>
                     </div>
-                     <div class="timeline-flecha">→</div>
-                    <div class="timeline-card">
+                    <div class="timeline-flecha" data-aos="fade-up" data-aos-delay="200">→</div>
+                    <div class="timeline-card" data-aos="fade-left" data-aos-delay="150">
                         <img src="assets/img/image-des.png" alt="Desarrollo y Diseño Web">
                         <div class="card-contenido">
                             <h3>Desarrollo y Diseño Web</h3>
@@ -127,7 +127,7 @@
                         <span class="card-año">2024</span>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center titulo-contenido">
+                <div class="d-flex justify-content-center titulo-contenido" data-aos="fade-up" data-aos-delay="100">
                     <div class="boton">
                         <a href="perfil.html" class="btn-principal"><span>Conóceme Más</span></a>
                     </div>
@@ -136,23 +136,19 @@
         </div>
         <!-- Contacto --> 
         <div class="contendor-contacto diferente-contenido container-xl">
-             <!-- Video de fondo -->
             <video class="video-fondo" autoplay muted loop playsinline>
                 <source src="assets/video/video-contacto.mp4" type="video/mp4">
             </video>
-
-            <!-- Overlay oscuro -->
             <div class="video-overlay"></div>
-            
-            <h2>¿Trabajamos juntos?</h2>
-            <p class="texto-contacto">Estoy disponible para nuevas oportunidades</p>
-            <p class="texto-contacto">Puedes escribirme por cualquiera de estos medios.</p>
-            <div class="d-flex justify-content-center titulo-contenido">
+            <h2 data-aos="fade-up">¿Trabajamos juntos?</h2>
+            <p class="texto-contacto" data-aos="fade-up" data-aos-delay="100">Estoy disponible para nuevas oportunidades</p>
+            <p class="texto-contacto" data-aos="fade-up" data-aos-delay="150">Puedes escribirme por cualquiera de estos medios.</p>
+            <div class="d-flex justify-content-center titulo-contenido" data-aos="fade-up" data-aos-delay="200">
                 <div class="boton">
                     <a href="perfil.html" class="btn-gris"><span>Escribeme</span></a>
                 </div>
             </div>
-            <div class="info-contacto titulo-contenido">
+            <div class="info-contacto titulo-contenido" data-aos="fade-up" data-aos-delay="250">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                 </svg>
@@ -166,20 +162,16 @@
                 </svg>
             </div>
         </div>
-
     </main>
     <footer class="footer separador-footer">
         <div class="footer-inner">
             <span class="footer-logo">CP</span>
-
             <div class="footer-contacto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
                 </svg>
                 <span>parraguez.s.constanza@gmail.com</span>
-
                 <div class="separador"></div>
-
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                 </svg>
@@ -199,8 +191,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- stats.js lib --> 
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: false, duration: 700, easing: 'ease-out' });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

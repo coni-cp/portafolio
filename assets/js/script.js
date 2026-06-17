@@ -66,3 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+const toggler = document.getElementById('cpToggler');
+const menu = document.getElementById('cpMobileMenu');
+
+toggler?.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  toggler.classList.toggle('open', open);
+  toggler.setAttribute('aria-expanded', open);
+});
+
+
+AOS.init({
+  once: false, // 👈 esto es la clave
+  duration: 800,
+  easing: 'ease-out'
+});

@@ -21,35 +21,73 @@ $titulo-contenido: 2.625rem;
 $sepador-navbar: 6.25rem;
 $separador-footer: 12.5rem;
 
-body{
-    h1{
-        font-family: $fuente-titulos;
-        font-size: 3rem;
-        font-weight: 800;
-        color: $color-texto-general;
-    }
-    h2{
+body {
+    h1 {
         font-family: $fuente-titulos;
         font-size: 2rem;
         font-weight: 800;
         color: $color-texto-general;
-    }
-    h3{
-        font-family: $fuente-titulos;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $color-texto-general;
-    }
-    h4{
-        font-family: $fuente-titulos;
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: $color-texto-general;
-    }
-    p{
-        font-family: $fuente-parrafo;
-        font-size: 1.125rem;
-        color: $color-texto-general;
+
+        @media (min-width: 768px) {
+            font-size: 2.5rem;
+        }
+        @media (min-width: 992px) {
+            font-size: 3rem;
+        }
     }
 
+    h2 {
+        font-family: $fuente-titulos;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $color-texto-general;
+
+        @media (min-width: 768px) {
+            font-size: 1.75rem;
+        }
+        @media (min-width: 992px) {
+            font-size: 2rem;
+        }
+    }
+
+    h3 {
+        font-family: $fuente-titulos;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $color-texto-general;
+
+        @media (min-width: 768px) {
+            font-size: 1.375rem;
+        }
+        @media (min-width: 992px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h4 {
+        font-family: $fuente-titulos;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $color-texto-general;
+
+        @media (min-width: 768px) {
+            font-size: 1.175rem;
+        }
+        @media (min-width: 992px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    p {
+        font-family: $fuente-parrafo;
+        font-size: 1rem;
+        color: $color-texto-general;
+
+        @media (min-width: 768px) {
+            font-size: 1.0625rem;
+        }
+        @media (min-width: 992px) {
+            font-size: 1.125rem;
+        }
+    }
 }

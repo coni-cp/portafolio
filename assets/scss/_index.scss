@@ -130,12 +130,11 @@ ul, li { list-style: none; }
 }
 
 .proyecto-destacado {
-  margin: 0 auto;
-  width: 90%;
-
   .laptop-wrapper {
     position: relative;
-    width: 100%;
+    width: 105%;
+    margin-left: -13%; // lo empuja hacia la izquierda
+
 
     .laptop-img {
       width: 100%;

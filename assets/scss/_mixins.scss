@@ -165,12 +165,12 @@
 
     &::before {
       animation: criss-cross-left 0.8s both alternate;
-      background-color: $burdeo-oscuro;
+      background-color: $hover-boton;
     }
 
     &::after {
       animation: criss-cross-right 0.8s both alternate;
-      background-color: $burdeo-oscuro;
+      background-color: $hover-boton;
     }
   }
 }
@@ -214,11 +214,11 @@
 
 
 @mixin tags{
-    padding: 5px 10px;
+    padding: 3px 8px;
     border-radius: 10px;
     background: $color-tags; // ajusta al color de tu paleta
     color: #000000;       // ajusta al color de tu paleta
-    font-size: 16px;
+    font-size: 14px;
     font-family: $fuente-parrafo;
     font-weight: 400;
 }
